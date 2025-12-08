@@ -12,7 +12,7 @@ export function AIChatButton() {
         onClick={() => setIsOpen(true)}
         variant="eco"
         size="icon"
-        className="fixed bottom-24 right-4 z-40 h-14 w-14 rounded-full shadow-glow animate-float"
+        className="fixed bottom-24 right-4 z-40 h-14 w-14 rounded-full shadow-glow"
       >
         <MessageCircle className="h-6 w-6" />
       </Button>
