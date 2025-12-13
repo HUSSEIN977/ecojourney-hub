@@ -44,7 +44,26 @@ export default function Home() {
     setStats({ transport, cooking, energy });
 
     if (challengesRes.data) {
-      setChallenges(challengesRes.data.map(c => ({ id: c.id, title: c.title, progress: 0, target: c.target_value, completed: false })));
+      // Get user's challenge progress
+      const { data: userChallengesData } = await supabase
+        .from("user_challenges")
+        .select("*")
+        .eq("user_id", user.id);
+      
+      const userProgressMap = new Map(
+        userChallengesData?.map(uc => [uc.challenge_id, { progress: uc.progress, completed: uc.completed }]) || []
+      );
+      
+      setChallenges(challengesRes.data.map(c => {
+        const userProgress = userProgressMap.get(c.id);
+        return {
+          id: c.id,
+          title: c.title,
+          progress: userProgress?.progress || 0,
+          target: c.target_value,
+          completed: userProgress?.completed || false
+        };
+      }));
     }
   };
 
