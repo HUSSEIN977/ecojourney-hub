@@ -1,5 +1,4 @@
-Here is the updated README. I have replaced the top section with a group introduction, added empty slots for team members, and cleaned up the instructions to remove all specific references to "Lovable" while keeping the standard development steps.
-Group Project Introduction
+
 Welcome to our project repository! We are a group of developers working together to build this application using modern web technologies. This codebase represents our collective effort to create a clean, scalable, and efficient solution.
 Team Members
  * HUSSIN MAHMOUD ABDELAAL MAHMOUD 
