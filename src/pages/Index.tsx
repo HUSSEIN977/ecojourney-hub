@@ -16,7 +16,7 @@ export default function Index() {
         <div className="inline-flex h-20 w-20 items-center justify-center rounded-3xl gradient-forest shadow-glow">
           <Leaf className="h-10 w-10 text-primary-foreground" />
         </div>
-        <h1 className="text-4xl font-bold tracking-tight">EcoTrack</h1>
+        <h1 className="text-4xl font-bold tracking-tight">TRACK2CARBON</h1>
         <p className="text-lg text-muted-foreground">Track your daily carbon footprint, complete eco-challenges, and make a real difference for our planet.</p>
         <Button onClick={() => navigate("/auth")} variant="eco" size="xl" className="gap-2">Get Started <ArrowRight className="h-5 w-5" /></Button>
       </div>
